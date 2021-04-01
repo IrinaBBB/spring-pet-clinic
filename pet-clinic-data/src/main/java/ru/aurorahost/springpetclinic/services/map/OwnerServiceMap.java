@@ -1,10 +1,12 @@
 package ru.aurorahost.springpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import ru.aurorahost.springpetclinic.model.Owner;
 import ru.aurorahost.springpetclinic.services.OwnerService;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long>
         implements OwnerService {
 

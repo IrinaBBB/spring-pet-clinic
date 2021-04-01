@@ -1,11 +1,13 @@
 package ru.aurorahost.springpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import ru.aurorahost.springpetclinic.model.Vet;
 import ru.aurorahost.springpetclinic.services.CrudService;
 import ru.aurorahost.springpetclinic.services.VetService;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap
         extends AbstractMapService<Vet, Long>
         implements VetService {
