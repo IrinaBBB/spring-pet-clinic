@@ -36,7 +36,6 @@ public class VetServiceMap
                 if (speciality.getId() == null) {
                     Speciality savedSpeciality = specialityService.save(speciality);
                     speciality.setId(savedSpeciality.getId());
-
                 }
             });
         }
