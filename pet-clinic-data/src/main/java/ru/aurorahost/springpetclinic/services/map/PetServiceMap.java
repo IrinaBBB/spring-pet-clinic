@@ -2,12 +2,13 @@ package ru.aurorahost.springpetclinic.services.map;
 
 import ru.aurorahost.springpetclinic.model.Pet;
 import ru.aurorahost.springpetclinic.services.CrudService;
+import ru.aurorahost.springpetclinic.services.PetService;
 
 import java.util.Set;
 
 public class PetServiceMap
         extends AbstractMapService<Pet, Long>
-        implements CrudService<Pet, Long> {
+        implements PetService {
 
     @Override
     public Set<Pet> findAll() {

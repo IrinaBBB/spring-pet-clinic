@@ -1,12 +1,12 @@
 package ru.aurorahost.springpetclinic.services.map;
 
 import ru.aurorahost.springpetclinic.model.Owner;
-import ru.aurorahost.springpetclinic.services.CrudService;
+import ru.aurorahost.springpetclinic.services.OwnerService;
 
 import java.util.Set;
 
 public class OwnerServiceMap extends AbstractMapService<Owner, Long>
-        implements CrudService<Owner, Long> {
+        implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
@@ -31,5 +31,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long>
     @Override
     public void delete(Owner owner) {
         super.delete(owner);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }
