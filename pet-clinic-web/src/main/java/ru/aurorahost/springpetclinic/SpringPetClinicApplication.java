@@ -1,4 +1,4 @@
-package ru.aurorahost.springpetclinic.model.springpetclinic;
+package ru.aurorahost.springpetclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
