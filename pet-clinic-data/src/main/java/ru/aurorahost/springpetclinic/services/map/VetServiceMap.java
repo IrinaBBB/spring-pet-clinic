@@ -1,8 +1,9 @@
 package ru.aurorahost.springpetclinic.services.map;
 
 import org.springframework.stereotype.Service;
+import ru.aurorahost.springpetclinic.model.Speciality;
 import ru.aurorahost.springpetclinic.model.Vet;
-import ru.aurorahost.springpetclinic.services.CrudService;
+import ru.aurorahost.springpetclinic.services.SpecialityService;
 import ru.aurorahost.springpetclinic.services.VetService;
 
 import java.util.Set;
@@ -11,6 +12,12 @@ import java.util.Set;
 public class VetServiceMap
         extends AbstractMapService<Vet, Long>
         implements VetService {
+
+    private final SpecialityService specialityService;
+
+    public VetServiceMap(SpecialityService specialityService) {
+        this.specialityService = specialityService;
+    }
 
     @Override
     public Set<Vet> findAll() {
@@ -24,6 +31,16 @@ public class VetServiceMap
 
     @Override
     public Vet save(Vet vet) {
+        if (vet.getSpecialities().size() > 0) {
+            vet.getSpecialities().forEach(speciality -> {
+                if (speciality.getId() == null) {
+                    Speciality savedSpeciality = specialityService.save(speciality);
+                    speciality.setId(savedSpeciality.getId());
+
+                }
+            });
+        }
+
         return super.save(vet);
     }
 

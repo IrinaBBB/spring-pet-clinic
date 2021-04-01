@@ -3,14 +3,14 @@ package ru.aurorahost.springpetclinic.services.map;
 
 import org.springframework.stereotype.Service;
 import ru.aurorahost.springpetclinic.model.Speciality;
-import ru.aurorahost.springpetclinic.services.SpecialitiesService;
+import ru.aurorahost.springpetclinic.services.SpecialityService;
 
 import java.util.Set;
 
 @Service
 public class SpecialityMapService
         extends AbstractMapService<Speciality, Long>
-        implements SpecialitiesService {
+        implements SpecialityService {
 
     @Override
     public Set<Speciality> findAll() {
