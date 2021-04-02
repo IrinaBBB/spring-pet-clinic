@@ -3,6 +3,7 @@ package ru.aurorahost.springpetclinic.services.map;
 import org.springframework.stereotype.Service;
 import ru.aurorahost.springpetclinic.model.Owner;
 import ru.aurorahost.springpetclinic.model.Pet;
+import ru.aurorahost.springpetclinic.model.PetType;
 import ru.aurorahost.springpetclinic.services.OwnerService;
 import ru.aurorahost.springpetclinic.services.PetService;
 import ru.aurorahost.springpetclinic.services.PetTypeService;
