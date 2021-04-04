@@ -7,12 +7,12 @@ import ru.aurorahost.springpetclinic.services.CrudService;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class AbstractJpaService<T extends BaseEntity, R extends CrudRepository<T, Long>>
+public abstract class AbstractSDJpaService<T extends BaseEntity, R extends CrudRepository<T, Long>>
         implements CrudService<T, Long> {
 
     protected R repository;
 
-    public AbstractJpaService(R repository) {
+    public AbstractSDJpaService(R repository) {
         this.repository = repository;
     }
 

@@ -12,7 +12,7 @@ import javax.transaction.Transactional;
 @Profile("springdatajpa")
 @Transactional
 public class OwnerSDJpaService
-        extends AbstractJpaService<Owner, OwnerRepository>
+        extends AbstractSDJpaService<Owner, OwnerRepository>
         implements OwnerService {
 
     public OwnerSDJpaService(OwnerRepository repository) {
