@@ -3,10 +3,7 @@ package ru.aurorahost.springpetclinic.bootstrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import ru.aurorahost.springpetclinic.model.*;
-import ru.aurorahost.springpetclinic.services.OwnerService;
-import ru.aurorahost.springpetclinic.services.PetTypeService;
-import ru.aurorahost.springpetclinic.services.SpecialityService;
-import ru.aurorahost.springpetclinic.services.VetService;
+import ru.aurorahost.springpetclinic.services.*;
 
 import java.time.LocalDate;
 
@@ -17,14 +14,16 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
     public DataLoader(OwnerService ownerService,
                       VetService vetService,
-                      PetTypeService petTypeService, SpecialityService specialitiesService) {
+                      PetTypeService petTypeService, SpecialityService specialitiesService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialitiesService;
+        this.visitService = visitService;
     }
 
     @Override
