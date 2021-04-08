@@ -23,4 +23,6 @@ public class OwnerSDJpaService
     public Owner findByLastName(String lastName) {
         return repository.findByLastName(lastName);
     }
+
+
 }
