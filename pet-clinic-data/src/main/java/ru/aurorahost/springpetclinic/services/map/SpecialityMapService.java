@@ -1,6 +1,7 @@
 package ru.aurorahost.springpetclinic.services.map;
 
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import ru.aurorahost.springpetclinic.model.Speciality;
 import ru.aurorahost.springpetclinic.services.SpecialityService;
@@ -8,6 +9,7 @@ import ru.aurorahost.springpetclinic.services.SpecialityService;
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class SpecialityMapService
         extends AbstractMapService<Speciality, Long>
         implements SpecialityService {
